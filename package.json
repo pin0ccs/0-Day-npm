@@ -1,6 +1,6 @@
 {
-  "name": "test-oidc",
-  "version": "1.0.0",
+  "name": "@pin0ccs/test-oidc",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,8 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
+  },
+  "dependencies": {
+    "@pin0ccs/test-oidc": "^1.0.2"
   }
 }
