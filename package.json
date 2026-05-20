@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/pin0ccs/0-Day-npm#readme",
   "publishConfig": {
-  "access": "public"
-}
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
 }
