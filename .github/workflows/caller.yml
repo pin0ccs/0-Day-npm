@@ -3,6 +3,10 @@ name: Caller Workflow
 on:
   workflow_dispatch
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
-  call-reusable:
+  call-shared:
     uses: pin0ccs/shared-workflows/.github/workflows/release.yml@main
