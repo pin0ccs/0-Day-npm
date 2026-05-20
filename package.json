@@ -1,5 +1,5 @@
 {
-  "name": "@pin0ccs/test-oidc",
+  "name": "test-oidc",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
