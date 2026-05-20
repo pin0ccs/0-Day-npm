@@ -9,4 +9,4 @@ permissions:
 
 jobs:
   publish:
-    uses: pin0ccs/shared-workflows/.github/workflows/release.yml@main
+    uses: pin0ccs/0-Day-npm/.github/workflows/caller.yml@main
