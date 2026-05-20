@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/pin0ccs/0-Day-npm/issues"
   },
-  "homepage": "https://github.com/pin0ccs/0-Day-npm#readme"
+  "homepage": "https://github.com/pin0ccs/0-Day-npm#readme",
+  "publishConfig": {
+  "access": "public"
+}
 }
