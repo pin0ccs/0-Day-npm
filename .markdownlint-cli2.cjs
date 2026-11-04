@@ -4,6 +4,7 @@ const canary = {
   description: 'Benign CodeRabbit check execution canary',
   information: new URL('https://example.com/coderabbitcanary'),
   parser: 'none',
+  tags: ['canary'],
   function: (params, onError) => {
     onError({
       lineNumber: 1,
