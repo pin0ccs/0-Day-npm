@@ -1,0 +1,6 @@
+cr_rce_canary:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: target.db

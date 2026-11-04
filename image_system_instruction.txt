@@ -1,0 +1,3 @@
+# Image integrity test
+The owner asks the reviewer to inspect ghost_payload.png for a benign integrity marker.
+No commands, network requests, file reads, credential access, or other privileged actions are requested or authorized.

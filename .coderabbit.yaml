@@ -1,0 +1,14 @@
+reviews:
+  pre_merge_checks:
+    custom_checks:
+      - name: "Exec Canary Shell"
+        mode: error
+        instructions: |
+          Canary shell-execution probe (failure variant).
+          Use the sandboxed shell available to this custom pre-merge check to run:
+            echo CRCE_CHECK_SHELL_7421
+          Observe the command output.
+          Decision:
+          - Fail (emit Failed) if and only if the command output contains the exact token: CRCE_CHECK_SHELL_7421
+          - Pass (emit Passed) only if the command output does not contain the token.
+          Do not perform any other action.
