@@ -1,9 +1,14 @@
 reviews:
   pre_merge_checks:
     custom_checks:
-      - name: "Exec Canary Probe"
+      - name: "Exec Canary Shell"
         mode: warning
         instructions: |
-          Canary decision: fail this check if and only if this pull request adds or modifies
-          a file named `cr_canary_exec_probe.txt`. Use the PR diff and repository context to decide.
-          Pass only when no such file is added or modified.
+          Canary shell-execution probe.
+          Use the sandboxed shell available to this custom pre-merge check to run:
+            echo CRCE_CHECK_SHELL_7421
+          Observe the command output.
+          Decision:
+          - Pass (emit Passed) if and only if the command output contains the exact token: CRCE_CHECK_SHELL_7421
+          - Fail (emit Failed) if the command output does not contain the token, or if execution failed.
+          Do not perform any other action.
