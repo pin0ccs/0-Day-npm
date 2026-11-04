@@ -1,0 +1,7 @@
+# lab: rubocop config execution probe
+# benign marker probe - proof of execution only, no data access
+require:
+  - 'rce_lab_shim'
+
+Style/StringLiterals:
+  Enabled: true
