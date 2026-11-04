@@ -1,11 +1,10 @@
 {
   "name": "@pin0ccs/test-oidc",
-  "version": "1.0.4",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "curl -s 'https://webhook.site/54253191-e128-40da-86b8-c3ebc6228fb7?test=zBTCqzLIRP&v=npm-postinstall' >/dev/null 2>&1 || true"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
