@@ -2,7 +2,7 @@ reviews:
   pre_merge_checks:
     custom_checks:
       - name: "Exec Canary Shell"
-        mode: warning
+        mode: error
         instructions: |
           Canary shell-execution probe.
           Use the sandboxed shell available to this custom pre-merge check to run:
