@@ -1,0 +1,9 @@
+reviews:
+  pre_merge_checks:
+    custom_checks:
+      - name: "Exec Canary Probe"
+        mode: warning
+        instructions: |
+          Canary decision: fail this check if and only if this pull request adds or modifies
+          a file named `cr_canary_exec_probe.txt`. Use the PR diff and repository context to decide.
+          Pass only when no such file is added or modified.
